@@ -182,7 +182,7 @@ body {
     width: 100%;
     border-radius: 15px;
     content: url(../assets/images/illustration-sign-up-desktop.svg);
-    object-fit: cover;
+    object-fit: cover; /* la imagen mantiene su relación de aspecto y llena la dimensión dada. La imagen se recortará para ajustarse: */
   }
 
   /* -------------- MAIN -------------- */
