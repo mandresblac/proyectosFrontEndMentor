@@ -1,4 +1,4 @@
-/* ------------ Google Fonts ------------ */
+/* ------------ GOOGLE FONTS ------------ */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
@@ -17,10 +17,273 @@
   --white: hsl(0, 0%, 100%);
 }
 
+/* -------------- ESTILOS GENERALES -------------- */
+
 body {
   font-family: "Roboto", sans-serif;
 }
 
-.hero__image {
+/* img {
+  display: block;
   width: 100%;
+} */
+
+.newsletter {
+  position: relative;
+}
+
+/* -------------- ESTILOS DEL HEADER -------------- */
+
+.hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* -------------- ESTILOS PARA MAIN -------------- */
+
+.main {
+  padding: 30px 20px 40px;
+}
+
+.main__title {
+  font-weight: 700;
+  color: var(--dark-slategrey);
+  margin-bottom: 20px;
+}
+
+.main__paragraph {
+  color: var(--charcoal-grey);
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.main__item {
+  color: var(--charcoal-grey);
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+/* -------------- ESTILOS PARA EL MAIN FORM -------------- */
+.main__form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__label {
+  color: var(--charcoal-grey);
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.main__input {
+  margin-bottom: 20px;
+  border: 1px solid var(--grey);
+  height: 2.8rem;
+  border-radius: 8px;
+  padding-left: 20px;
+  outline: none;
+}
+
+.main__input::placeholder {
+  color: var(--grey);
+}
+
+.main__button {
+  background-color: var(--dark-slategrey);
+  border: none;
+  color: var(--white);
+  padding: 15px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main__button:hover {
+  background-color: var(--white);
+  color: var(--dark-slategrey);
+  border: 1px solid var(--grey);
+  transition: all 0.4s;
+}
+
+/* -------------- ESTILOS PARA SUCCESS -------------- */
+.success {
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  padding: 30px 20px 40px;
+}
+
+.success__image {
+  margin-top: 110px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 40px;
+}
+
+.main__paragraph {
+  line-height: 25px;
+  margin-top: 4px;
+}
+
+.main__paragraph span {
+  font-weight: bold;
+}
+
+.success__button {
+  width: 100%;
+  background-color: var(--dark-slategrey);
+  /* background-color: red; */
+  border: none;
+  color: var(--white);
+  padding: 15px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 213px;
+}
+
+/* ------------ MEDIA QUERIES ------------ */
+
+@media (min-width: 768px) {
+  body {
+    background-color: var(--charcoal-grey);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .newsletter {
+    margin: 0 auto;
+    background-color: var(--white);
+    width: 70%;
+    height: 75%;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  /* -------------- HEADER -------------- */
+  .hero {
+    width: 69%;
+    height: 100%;
+    padding: 15px;
+  }
+
+  .hero__image {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    content: url(../assets/images/illustration-sign-up-desktop.svg);
+    object-fit: cover;
+  }
+
+  /* -------------- MAIN -------------- */
+
+  .main {
+    height: 100%;
+    padding-top: 15px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .main__title {
+    font-weight: 700;
+    color: var(--dark-slategrey);
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .main__paragraph {
+    color: var(--charcoal-grey);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+  }
+  .main__item img {
+    width: 15px;
+    height: 15px;
+  }
+  .main__item {
+    color: var(--charcoal-grey);
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+    gap: 15px;
+    margin-bottom: 5px;
+  }
+
+  /* -------------- EL MAIN FORM -------------- */
+  .main__form {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main__label {
+    color: var(--charcoal-grey);
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .main__input {
+    margin-bottom: 20px;
+    border: 1px solid var(--grey);
+    height: 2rem;
+    border-radius: 8px;
+    padding-left: 20px;
+    outline: none;
+  }
+
+  .main__input::placeholder {
+    color: var(--grey);
+  }
+
+  .main__button {
+    background-color: var(--dark-slategrey);
+    border: none;
+    color: var(--white);
+    padding: 15px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 2rem;
+    line-height: 3px;
+  }
+
+  .main__button:hover {
+    background-color: var(--white);
+    color: var(--dark-slategrey);
+    border: 1px solid var(--grey);
+    transition: all 0.4s;
+  }
+
+  /* -------------- ESTILOS PARA SUCCESS -------------- */
+  .success {
+    display: none;
+  }
+}
+
+/* ------------ CLASES UTILIZADAS EN JAVASCRIPT ------------ */
+.ocultar {
+  visibility: hidden;
+}
+
+.mostrar {
+  visibility: visible;
+  transition: all 0.5s;
 }

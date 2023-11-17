@@ -16,40 +16,73 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="hero">
-      <img
-        src="./assets/images/illustration-sign-up-mobile.svg"
-        alt="Imagen hero"
-        class="hero__image"
-      />
-    </header>
-
-    <main>
-      <h1>Stay updated!</h1>
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
-
-      <ul>
-        <li>Product discovery and building what matters</li>
-        <li>Measuring to ensure updates are a success</li>
-        <li>And much more!</li>
-      </ul>
-
-      <form action="">
-        <label for="">Email address</label>
-        <input type="email" name="" id="" placeholder="email@company.com" />
-        <input
-          type="submit"
-          value="Subscribe to
-        monthly newsletter"
+    <div class="newsletter">
+      <header class="hero">
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="Imagen hero"
+          class="hero__image"
         />
-      </form>
-    </main>
+      </header>
+
+      <main class="main">
+        <h1 class="main__title">Stay updated!</h1>
+        <p class="main__paragraph">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+
+        <ul class="main__list">
+          <li class="main__item">
+            <img src="./assets/images/icon-list.svg" alt="Icon list" />
+            Product discovery and building what matters
+          </li>
+          <li class="main__item">
+            <img src="./assets/images/icon-list.svg" alt="Icon list" />
+            Measuring to ensure updates are a success
+          </li>
+          <li class="main__item">
+            <img src="./assets/images/icon-list.svg" alt="Icon list" />
+            And much more!
+          </li>
+        </ul>
+
+        <form class="main__form">
+          <label for="main__input" class="main__label">Email address</label>
+          <input
+            type="email"
+            name=""
+            id="main__input"
+            placeholder="email@company.com"
+            class="main__input"
+            required
+          />
+          <input
+            type="submit"
+            class="main__button"
+            value="Subscribe to monthly newsletter"
+          />
+        </form>
+      </main>
+    </div>
+
+    <div class="success ocultar">
+      <img
+        src="./assets/images/icon-success.svg"
+        alt="Icon list"
+        class="success__image"
+      />
+      <h1 class="main__title">Thanks for <br />subscribing!</h1>
+      <p class="main__paragraph">
+        A confirmation email has been sent to <span>ash@loremcompany.com</span>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+
+      <input type="submit" class="success__button" value="Dismiss message" />
+    </div>
 
     <!-- Success message start -->
 
-    <!-- Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
+    <!--   Dismiss message -->
 
     <script src="./js/script.js"></script>
   </body>
