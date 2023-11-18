@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu desplegable</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./img/header_govco.png" alt="Logo" class="header__logo" />
+      <img
+        src="./img/menu.svg"
+        alt="Menu"
+        class="header__menu"
+        id="header__menu"
+      />
+
+      <nav class="header__nav ocultar" id="header__nav">
+        <img
+          src="./img/close.svg"
+          alt="Close"
+          class="header__close"
+          id="header__close"
+        />
+
+        <ul class="header__links">
+          <li class="header__item">
+            <a href="#">Inicio</a>
+          </li>
+
+          <li class="header__item">
+            <a href="#">
+              Tranparencia y acceso a <br />
+              la información.
+            </a>
+          </li>
+
+          <li class="header__item header__item-row">
+            <details>
+              <summary>
+                Atencion y servicios al <br />
+                ciudadano.
+              </summary>
+              <div class="header__subItem">
+                <a href="#">
+                  Preguntas frecuentes <br />
+                  agencia Atenea
+                </a>
+                <a href="#">
+                  Preguntas frecuentes <br />
+                  jovenes a la U
+                </a>
+                <a href="#">
+                  Denuncias actos de <br />
+                  corruçión.
+                </a>
+              </div>
+            </details>
+          </li>
+
+          <li class="header__item">
+            <a href="#">Participa</a>
+          </li>
+
+          <li class="header__item header__item-row">
+            <details>
+              <summary>Nosotros</summary>
+              <div class="header__subItem">
+                <a href="#">Qué es Atenea</a>
+                <a href="#">Misión y Visión</a>
+                <a href="#">Equipo de trabajo</a>
+              </div>
+            </details>
+          </li>
+
+          <li class="header__item">
+            <a href="#">Posmedia</a>
+          </li>
+
+          <li class="header__item">
+            <a href="#">
+              Cienecia, Tecnología e <br />
+              innovación.
+            </a>
+          </li>
+
+          <li class="header__item">
+            <a href="#">Convocatorias</a>
+          </li>
+
+          <li class="header__item header__item-row">
+            <details>
+              <summary>Entérate</summary>
+              <div class="header__subItem">
+                <a href="#">Historias</a>
+                <a href="#">Noticias</a>
+                <a href="#">
+                  Marketplace <br />
+                  Posmedia en Bogota
+                </a>
+              </div>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>
