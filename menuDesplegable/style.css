@@ -16,10 +16,8 @@ img {
 }
 
 .header {
-  position: relative;
   background-color: #3366cc;
   padding: 7px 10px;
-  width: 100%;
   z-index: 0;
 
   display: flex;
@@ -37,16 +35,17 @@ img {
   cursor: pointer;
   width: 30px;
 
+  /* Nesting */
   &:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
 
 .header__nav {
-  position: absolute;
+  position: absolute; /* Posición con relacion al Body no al header  */
   background-color: #333333;
   color: #fff;
-  min-height: 100vh;
+  min-height: 100%;
   padding-top: 10px;
   padding-left: 10px;
   top: 0;
@@ -66,6 +65,7 @@ img {
   cursor: pointer;
   margin: 10px 0 10px 10px;
 
+  /* Nesting */
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
@@ -128,18 +128,18 @@ img {
 }
 
 .mostrar {
-  display: block;
-  z-index: 100;
+  /* display: block; */
   right: 0%;
-  transition: right 14s linear;
-  /* animation-name: desplazar-menu;
-  animation-duration: 0.1s;
-  animation-fill-mode: forwards; */
+  transition: all 10s;
+  /* animation-name: desplazar-menu-izquierda; */
+  /* animation-duration: 0.2s; */
+  /* animation-direction: alternate; */
+  /* animation-fill-mode: forwards; */
 }
 
-@keyframes desplazar-menu {
+/* Animación para mostrar menu, desplazarlo de derecha a izquierda */
+@keyframes desplazar-menu-izquierda {
   0% {
-    display: none;
     right: -50%;
   }
   25% {
@@ -152,7 +152,6 @@ img {
     right: -12.5%;
   }
   100% {
-    display: block;
     right: 0%;
   }
 }
