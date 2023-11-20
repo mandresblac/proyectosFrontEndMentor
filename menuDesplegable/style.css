@@ -50,20 +50,19 @@ img {
   padding-left: 10px;
   top: 0;
 
-  /* Para ocultar el menu */
-  right: -50%;
-
   display: flex;
   flex-direction: column;
 }
 
 .header__close {
   display: block;
-  width: 30px;
+  width: 31px;
   max-width: 40px;
   height: auto;
   cursor: pointer;
-  margin: 10px 0 10px 10px;
+  margin: 0px 30px 5px 0px;
+  align-self: flex-end; /* Ubica el boton en el borde derecho del header__nav */
+  background-color: rgb(201, 47, 47);
 
   /* Nesting */
   &:hover {
@@ -84,16 +83,12 @@ img {
 }
 
 .header__item:hover {
-  color: rgb(158, 153, 153);
+  background-color: #1b1b1a;
 }
 
 .header__item a {
   color: #fff;
   text-align: left;
-}
-
-.header__item a:hover {
-  color: rgb(158, 153, 153);
 }
 
 .header__item-row summary {
@@ -113,6 +108,10 @@ img {
   flex-direction: column;
 }
 
+.header__subItem a:hover {
+  color: rgb(169, 169, 169);
+}
+
 .header__subItem a:nth-child(1) {
   margin-bottom: 10px;
 }
@@ -122,36 +121,19 @@ img {
 }
 
 /* ------------ CLASES UTILIZADAS DESDE JAVASCRIPT ------------ */
+
+/* Para ocultar el header__nav */
 .ocultar {
-  display: none;
-  transition: all 4s linear;
+  visibility: hidden;
+  position: fixed; /* position: fixed; para que no muestre el scroll lateral */
+  right: -70%; /* Oculta el menu -70% a la derecha  */
+  transition: all 0.6s;
 }
 
+/* Para mostrar el header__nav */
 .mostrar {
-  /* display: block; */
-  right: 0%;
-  transition: all 10s;
-  /* animation-name: desplazar-menu-izquierda; */
-  /* animation-duration: 0.2s; */
-  /* animation-direction: alternate; */
-  /* animation-fill-mode: forwards; */
-}
-
-/* Animación para mostrar menu, desplazarlo de derecha a izquierda */
-@keyframes desplazar-menu-izquierda {
-  0% {
-    right: -50%;
-  }
-  25% {
-    right: -37.5%;
-  }
-  50% {
-    right: -25%;
-  }
-  75% {
-    right: -12.5%;
-  }
-  100% {
-    right: 0%;
-  }
+  /* visibility: visible; */
+  position: fixed; /* position: fixed; para que no muestre el scroll lateral */
+  right: 0%; /* Muestra el menu devolciendolo a su posición inicial 0% right */
+  transition: all 0.2s ease-in-out;
 }
