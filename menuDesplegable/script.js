@@ -2,7 +2,6 @@ const btnAbrirMenu = document.querySelector("#header__menu");
 const btnCerrarMenu = document.querySelector("#header__close");
 const menu = document.querySelector("#header__nav");
 const tagDetails = document.querySelectorAll(".header__details");
-console.log(tagDetails);
 
 btnAbrirMenu.addEventListener("click", () => {
   menu.classList.remove("ocultar");

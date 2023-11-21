@@ -162,13 +162,13 @@ img {
   }
   .header__nav {
     position: absolute;
-    top: 34px;
+    top: 46px;
     left: 0;
     right: 0;
     background-color: transparent;
     color: #757574;
     min-height: 0%;
-    margin-top: 12px;
+    /* margin-top: 12px; */
     padding-top: 0px;
     padding-left: 0px;
     border-bottom: 2px solid #fc7a42;
@@ -223,9 +223,6 @@ img {
     text-align: left;
     border-bottom: 1px solid #d7d7d6f6;
   }
-  /* .header__subItem a {
-    text-align: left;
-  } */
   .header__subItem a:hover {
     color: #fc7a42;
   }
