@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: #fba919;
+  position: relative;
+  padding: 10px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__btn {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* barritas del menu */
+.uno,
+.dos,
+.tres {
+  background-color: white;
+  width: 100%;
+  height: 3px;
+  transition: all 0.5s; /* Transición para la animación */
+}
+
+.dos {
+  margin: 5px 0;
+}
+
+/* ---------- ANIMACIÓN MENU ---------- */
+.mostrar-menu .uno {
+  transform: rotate(45deg) translate(5px, 5px); /* Rota y translada la primera barra */
+}
+
+.mostrar-menu .dos {
+  opacity: 0; /* Oculta la segunda barra */
+}
+
+.mostrar-menu .tres {
+  transform: rotate(-45deg) translate(5px, -7px); /* Rota y translada la tercera barra */
+}
+
+.header__text {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.5rem;
+  padding-top: 2px;
+}
+
+/* ---------- HEADER__NAV ---------- */
+.header__nav {
+  position: absolute;
+  top: 50px;
+  left: -200px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.8s;
+  /* padding: 10px 0; */
+  border-bottom-right-radius: 5px;
+}
+
+.header__item > a {
+  border-bottom: 1px solid #fba919;
+}
+
+.header__link {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 4px 20px;
+  font-size: 1.2rem;
+  color: #000;
+  padding: 4px 45px 4px 20px;
+}
+
+.header__link:hover {
+  background-color: #fba919;
+}
+
+.header__link-row::after {
+  content: url(./img/row.svg);
+  position: absolute;
+  top: 0px;
+}
+
+.header__submenu {
+  background-color: #dcdcdc;
+  /* visibility: hidden; */
+  /* height: 0px; */
+  /* position: absolute; */
+  display: none;
+  /* height: 0px; */
+  transition: all 0.1s;
+}
+
+.header__submenu a:hover {
+  background-color: #c2c0c0;
+}
+
+/* ------------ CLASES QUE SE UTILIZAN CON JAVASCRIPT */
+/* Muestra el menu */
+.mostrar-menu {
+  left: 0px;
+  transition: all 0.8s;
+}
+
+/* Oculta los submenus */
+.mostrar-submenu {
+  display: block;
+  /* visibility: visible; */
+  /* height: 100%; */
+  transition: all 0.3s;
+}
