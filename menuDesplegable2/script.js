@@ -1,7 +1,6 @@
 const btnMenu = document.querySelector("#header__btn");
 const nav = document.querySelector("#header__nav");
 const tagDetails = document.querySelectorAll("details");
-console.log(tagDetails);
 
 btnMenu.addEventListener("click", () => {
   // Muestra el Menu principal
