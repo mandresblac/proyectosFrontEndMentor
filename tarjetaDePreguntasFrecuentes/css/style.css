@@ -37,7 +37,7 @@ body {
 
 .card__container {
   position: relative;
-  margin: 150px auto 50px;
+  margin: 155px auto 50px;
   width: 89%;
   background-color: #fff;
   border-radius: 25px;
@@ -56,9 +56,10 @@ body {
 
 .card__img1 {
   position: absolute;
-  top: -110px;
+  top: -113px;
   display: block;
   width: 75%;
+  max-width: 251px;
   height: auto;
 }
 
@@ -106,11 +107,12 @@ body {
   color: var(--very-dark-grayish-blue);
 }
 
-/* .card__arrow {
+.card__arrow {
   display: block;
   max-width: 100%;
   height: auto;
-} */
+  transition: all 0.3s;
+}
 
 .card__paragraph {
   font-size: 12px;

@@ -38,12 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const summaries = detail.querySelectorAll("summary");
 
       // Iteramos sobre cada elemento summary
-      summaries.forEach((summary) => {
+      summaries.forEach(function (summary) {
         // Obtenemos todos los elementos card__arrow que estan dentro del summary actual
         const rows = document.querySelectorAll("#card__arrow");
 
         // Iteramos sobre cada elemento row
-        rows.forEach((row) => {
+        rows.forEach(function (row) {
+          console.log(row);
           // Verificamos si el details está abierto
           if (detail.open) {
             // Si está abierto, establecemos el color, peso de la letra en bold y rotamos row 180° agregandole la clase "rotate-arrow"
