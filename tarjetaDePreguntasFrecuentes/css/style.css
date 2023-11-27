@@ -122,6 +122,11 @@ body {
 
 /* -------------- CLASES UTILIZADAS DESDE JAVASCRIPT -------------- */
 
+.active-summary {
+  color: #1c1d36;
+  font-weight: bold;
+}
+
 .rotate-arrow {
   transform: rotate(180deg);
   transition: transform 0.3s;

@@ -48,13 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
           // Verificamos si el details está abierto
           if (detail.open) {
             // Si está abierto, establecemos el color, peso de la letra en bold y rotamos row 180° agregandole la clase "rotate-arrow"
-            summary.style.color = "#1c1d36";
-            summary.style.fontWeight = "bold";
-            row.classList.add("rotate-arrow");
+            summary.classList.add("active-summary");
+            if (summary.classList.contains("active-summary")) {
+              row.classList.add("rotate-arrow");
+            } else {
+              row.classList.remove("rotate-arrow");
+            }
           } else {
             // Si está cerrado, restauramos el color y peso de la letra a normal
-            summary.style.color = "#4a4b5e";
-            summary.style.fontWeight = "normal";
+            summary.classList.remove("active-summary");
             row.classList.remove("rotate-arrow");
           }
         });
