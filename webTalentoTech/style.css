@@ -25,6 +25,7 @@ body {
 }
 
 .header {
+  position: relative;
   padding: 20px 20px 20px 25px;
   display: flex;
   flex-direction: column;
@@ -41,4 +42,61 @@ body {
 
 .header__img2 {
   max-width: 110px;
+}
+
+.header__openMenu {
+  position: relative;
+  width: 37px;
+  height: 37px;
+  background-image: url(img/openMenu.svg);
+  background-repeat: no-repeat;
+  background-size: 37px;
+  cursor: pointer;
+}
+
+.header__openMenu::after {
+  position: absolute;
+  content: "Menú";
+  display: inline-block;
+  color: #fff;
+  top: 6px;
+  left: 39px;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.header__closeMenu {
+  position: relative;
+  width: 37px;
+  height: 37px;
+  background-image: url(img/closeMenu.svg);
+  background-repeat: no-repeat;
+  background-size: 37px;
+  display: none;
+}
+
+.header__nav {
+  position: absolute;
+  background-color: rgba(6, 16, 102, 0.65);
+  top: 120px;
+  left: -280px;
+  transition: all 0.8s;
+  padding: 20px 30px;
+  border-bottom-right-radius: 10px;
+}
+
+.header__items {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+  cursor: pointer;
+}
+
+.header__items-1 {
+  border-top: 1px solid rgba(250, 250, 250, 0.1);
+}
+
+.header__links {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
 }
