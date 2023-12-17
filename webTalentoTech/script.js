@@ -4,12 +4,12 @@ const menu = document.querySelector("#header__nav");
 
 btnOpenMenu.addEventListener("click", () => {
   menu.classList.add("mostrar-menu");
-  btnOpenMenu.style.display = "none";
-  btnCloseMenu.style.display = "block";
+  btnOpenMenu.classList.toggle("ocultar");
+  btnCloseMenu.classList.toggle("mostrar");
 });
 
 btnCloseMenu.addEventListener("click", () => {
   menu.classList.remove("mostrar-menu");
-  btnOpenMenu.style.display = "block";
-  btnCloseMenu.style.display = "none";
+  btnCloseMenu.classList.toggle("mostrar");
+  btnOpenMenu.classList.toggle("ocultar");
 });
