@@ -52,6 +52,7 @@ body {
   background-repeat: no-repeat;
   background-size: 37px;
   cursor: pointer;
+  transition: all 0.8s;
 }
 
 .header__openMenu::after {
@@ -67,28 +68,46 @@ body {
 
 .header__closeMenu {
   position: relative;
-  width: 37px;
-  height: 37px;
+  width: 39px;
+  height: 39px;
   background-image: url(img/closeMenu.svg);
   background-repeat: no-repeat;
-  background-size: 37px;
+  background-size: 39px;
   display: none;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+.header__closeMenu::after {
+  position: absolute;
+  content: "Menú";
+  display: inline-block;
+  color: #fff;
+  top: 6px;
+  left: 39px;
+  font-size: 19px;
+  font-weight: 300;
 }
 
 .header__nav {
   position: absolute;
   background-color: rgba(6, 16, 102, 0.65);
   top: 120px;
-  left: -280px;
+  left: -300px;
   transition: all 0.8s;
   padding: 20px 30px;
+  border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .header__items {
-  padding: 10px 0;
+  padding: 10px;
   border-bottom: 1px solid rgba(250, 250, 250, 0.1);
   cursor: pointer;
+}
+
+.header__items:hover {
+  background-color: rgba(54, 62, 135, 0.65);
 }
 
 .header__items-1 {
@@ -99,4 +118,11 @@ body {
   font-size: 20px;
   font-weight: 400;
   color: #fff;
+}
+
+/* ------------ CLASES QUE SE UTILIZAN CON JAVASCRIPT ------------ */
+/* Muestra el menu */
+.mostrar-menu {
+  left: 0px;
+  transition: all 0.8s;
 }
