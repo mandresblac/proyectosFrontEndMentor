@@ -179,8 +179,6 @@ body {
   background-image: url(img/lines.png);
   background-repeat: no-repeat;
   background-position: top center;
-  /* background-size: cover; */
-  object-fit: cover;
   opacity: 0.2;
 }
 
