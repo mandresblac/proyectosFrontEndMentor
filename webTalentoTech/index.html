@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
       <img
         class="header__img1"
@@ -43,6 +44,7 @@
       </nav>
     </header>
 
+    <!-- Section -->
     <section class="section">
       <h2 class="section__title">
         Bienvenidos a la Feria Virtual
@@ -93,7 +95,40 @@
       </div>
     </section>
 
-    <footer></footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- <img src="./img/lines.png" alt="lines" class="footer__img1" /> -->
+      <div class="footer__img1"></div>
+
+      <img
+        src="./img/logo_talento.svg"
+        alt="Logo talento"
+        class="footer__img2"
+      />
+
+      <div class="footer__bottoms">
+        <dialog class="footer__dialog" id="footer__dialogBox">
+          <a
+            href="#"
+            class="footer__btnCloseDialog"
+            id="footer__btnOCloseDialog"
+          >
+            Aceptar
+          </a>
+        </dialog>
+
+        <a href="#" class="footer__btnOpenDialog" id="footer__btnOpenDialog">
+          <img src="./img/ico_help_bottom2.svg" alt="Icon help bottom" />
+        </a>
+
+        <a href="#" class="footer__btnaccessibility">
+          <img
+            src="./img/ico_accesibilidad.svg"
+            alt="Icon accessibility bottom"
+          />
+        </a>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
