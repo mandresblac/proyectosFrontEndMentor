@@ -304,23 +304,41 @@ body {
 
 /* ------------ FOOTER ACCESIBILITY  ------------ */
 
-.footer__accessibility {
+.footer__accesibility {
   position: fixed;
-  top: 400px;
-  left: 150px;
+  top: 287px;
+  left: 298px;
   border: none;
-  /* background-color: rgba(13, 32, 100, 0.7); */
+  background-color: transparent;
 }
 
-.footer__accessibility::backdrop {
+.footer__accesibility::backdrop {
   background-color: rgba(13, 32, 100, 0.7);
 }
 
-.footer__containerAccessibility {
+.footer__containerAccesibility {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+}
+
+.footer__linkAccesibility {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #d79fff;
+  background: linear-gradient(
+    90deg,
+    rgb(215, 159, 255) 0%,
+    rgb(144, 161, 239) 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transform: ; */
 }
 
 /* ------------ CLASES QUE SE UTILIZAN CON JAVASCRIPT ------------ */
