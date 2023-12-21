@@ -4,6 +4,7 @@ const menu = document.querySelector("#header__nav");
 const dialogBox = document.querySelector("#footer__dialogBox");
 const btnOpenDialog = document.querySelector("#footer__btnOpenDialog");
 const btnCloseDialog = document.querySelector("#footer__btnCloseDialog");
+const btnParagraphButton = document.querySelector("#footer__paragraphButton");
 
 /* Botones para abrir y cerrar el menu principal */
 btnOpenMenu.addEventListener("click", () => {
@@ -24,5 +25,9 @@ btnOpenDialog.addEventListener("click", () => {
 });
 
 btnCloseDialog.addEventListener("click", () => {
+  dialogBox.close();
+});
+
+btnParagraphButton.addEventListener("click", () => {
   dialogBox.close();
 });

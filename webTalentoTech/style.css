@@ -14,6 +14,7 @@
 :root {
   --text1: #fff;
   --text2: #a7fffc;
+  --black: #000;
 }
 
 img {
@@ -97,7 +98,7 @@ body {
 
 .header__nav {
   position: absolute;
-  background-color: rgba(6, 16, 102, 0.65);
+  background-color: rgb(14, 24, 114);
   top: 120px;
   left: -300px;
   transition: all 0.8s;
@@ -211,11 +212,13 @@ body {
   transform: translate(-50%, -50%);
   z-index: 0;
   border: none;
+  overflow: visible;
 }
 
 .footer__dialog::backdrop {
   background-color: rgba(255, 255, 255, 0.7);
   transition: all 0.5s;
+  z-index: 0;
 }
 
 .footer__containerDialog {
@@ -233,18 +236,70 @@ body {
   text-transform: uppercase;
   font-weight: 900;
   color: var(--text1);
-  margin: 30px 0;
+  margin: 35px 0;
 }
 
 .footer__btnCloseDialog {
-  background-color: red;
+  background: #061066;
   position: absolute;
-  right: -10px;
-  top: -15px;
-  width: 30px;
-  height: 30px;
-  z-index: 200;
+  right: -25px;
+  top: -30px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
+  border: 3px solid #d19efb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__btnCloseDialog:hover {
+  background-color: var(--black);
+}
+
+.footer__btnCloseDialogImg {
+  width: 31px;
+  height: 31px;
+}
+
+.footer__paragraphDialog {
+  color: var(--text1);
+  text-align: center;
+  /* letter-spacing: 1px; */
+  line-height: 20px;
+  padding: 0 14px;
+}
+
+.footer__paragraphDialog > a {
+  color: var(--text2);
+  font-weight: bold;
+}
+
+.footer__paragraphButton {
+  margin: 40px 0 45px 0;
+  background-color: #d79fff;
+  background-image: linear-gradient(
+    to right,
+    #d79fff,
+    #90a1ef,
+    #90a1ef,
+    #d79fff
+  );
+  box-shadow: 0 1px 16px 0 rgba(215, 159, 255, 0.6);
+  background-size: 300% 100%;
+  padding: 10px 25px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 50px;
+  color: #061066;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer__paragraphButton:hover {
+  background-position: 100% 0;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 5px 16px 0 rgba(215, 159, 255, 0.6);
 }
 
 /* ------------ CLASES QUE SE UTILIZAN CON JAVASCRIPT ------------ */
