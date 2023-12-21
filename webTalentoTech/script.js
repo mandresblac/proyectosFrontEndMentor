@@ -5,6 +5,13 @@ const dialogBox = document.querySelector("#footer__dialogBox");
 const btnOpenDialog = document.querySelector("#footer__btnOpenDialog");
 const btnCloseDialog = document.querySelector("#footer__btnCloseDialog");
 const btnParagraphButton = document.querySelector("#footer__paragraphButton");
+const footerAccesibility = document.querySelector("#footer__accessibility");
+const btnOpenAccesibility = document.querySelector(
+  "#footer__btnOpenAccessibility"
+);
+const btnCloseAccesibility = document.querySelector(
+  "#footer__btnCloseAccessibility"
+);
 
 /* Botones para abrir y cerrar el menu principal */
 btnOpenMenu.addEventListener("click", () => {
@@ -30,4 +37,13 @@ btnCloseDialog.addEventListener("click", () => {
 
 btnParagraphButton.addEventListener("click", () => {
   dialogBox.close();
+});
+
+/* Botones para abrir y cerrar el panel de accecibilidad que esta en el Footer */
+btnOpenAccesibility.addEventListener("click", () => {
+  footerAccesibility.showModal();
+});
+
+btnCloseAccesibility.addEventListener("click", () => {
+  footerAccesibility.close();
 });

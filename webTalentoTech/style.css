@@ -202,7 +202,8 @@ body {
 
 /* ------------ FOOTER DIALOG - VENTANA MODAL ------------ */
 .footer__dialog {
-  width: 307px;
+  min-width: 300px;
+  max-width: 450px;
   background: #061066;
   border-radius: 20px;
   padding: 10px;
@@ -218,7 +219,6 @@ body {
 .footer__dialog::backdrop {
   background-color: rgba(255, 255, 255, 0.7);
   transition: all 0.5s;
-  z-index: 0;
 }
 
 .footer__containerDialog {
@@ -300,6 +300,27 @@ body {
   background-position: 100% 0;
   transition: all 0.5s ease-in-out;
   box-shadow: 0 5px 16px 0 rgba(215, 159, 255, 0.6);
+}
+
+/* ------------ FOOTER ACCESIBILITY  ------------ */
+
+.footer__accessibility {
+  position: fixed;
+  top: 400px;
+  left: 150px;
+  border: none;
+  /* background-color: rgba(13, 32, 100, 0.7); */
+}
+
+.footer__accessibility::backdrop {
+  background-color: rgba(13, 32, 100, 0.7);
+}
+
+.footer__containerAccessibility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ------------ CLASES QUE SE UTILIZAN CON JAVASCRIPT ------------ */
@@ -416,6 +437,22 @@ body {
 
   .section__link {
     color: var(--text2);
+  }
+
+  /* ------------ FOOTER DIALOG - VENTANA MODAL ------------ */
+
+  .footer__titleDialog {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  .footer__paragraphDialog {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0;
+    text-align: center;
+  }
+  .footer__paragraphButton {
+    padding: 10px 45px;
   }
 }
 
