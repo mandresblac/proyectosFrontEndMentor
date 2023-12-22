@@ -42,8 +42,10 @@ btnParagraphButton.addEventListener("click", () => {
 /* Botones para abrir y cerrar el panel de accecibilidad que esta en el Footer */
 btnOpenAccesibility.addEventListener("click", () => {
   footerAccesibility.showModal();
+  footerAccesibility.classList.add("transladar__arriba");
 });
 
 btnCloseAccesibility.addEventListener("click", () => {
   footerAccesibility.close();
+  footerAccesibility.classList.remove("transladar__arriba");
 });

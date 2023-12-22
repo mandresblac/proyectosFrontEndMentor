@@ -306,27 +306,40 @@ body {
 
 .footer__accesibility {
   position: fixed;
-  top: 287px;
-  left: 298px;
+  top: 545px;
+  left: 292px;
   border: none;
   background-color: transparent;
+  transition: all 0.8s;
 }
 
 .footer__accesibility::backdrop {
   background-color: rgba(13, 32, 100, 0.7);
+  transition: all 4s;
 }
 
 .footer__containerAccesibility {
+  width: 42px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  transition: all 0.8s;
+  overflow: hidden;
+}
+
+.footer__itemAccesibility {
+  width: 30px;
+  height: 30px;
 }
 
 .footer__linkAccesibility {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
+
   border-radius: 50%;
   background: #d79fff;
   background: linear-gradient(
@@ -338,7 +351,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transform: ; */
+}
+
+.footer__linkAccesibility:hover {
+  transform: scale(1.1, 1.1);
 }
 
 /* ------------ CLASES QUE SE UTILIZAN CON JAVASCRIPT ------------ */
@@ -358,6 +374,12 @@ body {
   transition: opacity 0.8s;
   left: 20px;
   top: 79px;
+}
+
+.transladar__arriba {
+  top: 278px;
+  left: 292px;
+  transition: top 0.8s;
 }
 
 /* ------------ MEDIA QUERIES ------------ */
