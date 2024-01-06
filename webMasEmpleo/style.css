@@ -11,7 +11,11 @@
 
 :root {
   --text1: #405b91;
-  --fondo1: #155091;
+  --text2: #ffffff;
+  --fondo1: #e8ebef;
+  --fondo2: #fffefe;
+  --fondo3: #155091;
+  --fondo4: #e5e6ea;
 }
 
 img {
@@ -21,11 +25,11 @@ img {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #e8ebef;
+  background-color: var(--fondo1);
 }
 
 .header {
-  background-color: #fffefe;
+  background-color: var(--fondo2);
   padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
@@ -43,7 +47,7 @@ body {
   position: absolute;
   top: -1px;
   left: -32px;
-  background-color: var(--fondo1);
+  background-color: var(--fondo3);
   border-radius: 50%;
   padding: 3px;
 }
@@ -77,7 +81,103 @@ body {
   cursor: pointer;
 }
 
-.header__nav {
+.header__closeMenu {
   position: absolute;
-  display: none;
+  right: -2px;
+  top: -97px;
+  width: 35px;
+  height: 35px;
+  align-self: flex-start;
+  cursor: pointer;
+  /* display: none; */
+}
+
+.header__nav {
+  background-color: var(--fondo2);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  border-radius: 20px;
+  /* display: none; */
+}
+
+.header__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.header__links {
+  padding: 1rem;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.header__links:hover {
+  background-color: var(--fondo4);
+}
+
+.header__details {
+  position: relative;
+  margin-left: 15px;
+}
+
+.header__summary {
+  position: relative;
+  background-color: var(--fondo3);
+  padding: 12px 25px 12px 12px;
+  border-radius: 25px;
+  color: var(--text2);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header__summary::after {
+  position: absolute;
+  content: url(/img/downArrow.svg);
+  top: 9px;
+  right: 4px;
+}
+
+.header__detailsItems {
+  position: absolute;
+  top: 43px;
+  right: -8px;
+  background-color: var(--fondo2);
+  padding: 8px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__detailsLinks {
+  color: var(--text1);
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.header__detailsLinks:hover {
+  color: var(--text2);
+  background-color: var(--fondo3);
+}
+
+/* ------------ CLASES QUE SE UTILIZAN CON JAVASCRIPT ------------ */
+
+.ocultar {
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.mostrar {
+  opacity: 1;
+  transition: opacity 0.8s;
+  right: -2px;
+  top: -2px;
 }
