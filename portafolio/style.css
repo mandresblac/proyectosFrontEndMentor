@@ -1,7 +1,9 @@
 /* ------------ Google Fonts ------------ */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,6 +11,92 @@
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 body {
   font-family: "Lato", sans-serif;
+}
+
+.header {
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+
+.header__subTitle {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.header__openMenu {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background-image: url(./img/openMenu.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  /* opacity: 0; */
+}
+
+.header__openMenu::after {
+  position: absolute;
+  content: "Menú";
+  font-size: 17px;
+  color: #000;
+  top: 2px;
+  left: 25px;
+}
+
+.header__closeMenu {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url(./img/closeMenu.svg);
+  background-repeat: no-repeat;
+  background-size: 27px;
+  left: -3px;
+  top: 30px;
+  opacity: 0;
+}
+
+.header__nav {
+  position: absolute;
+  background-color: #efefef;
+  padding: 10px 30px 10px 20px;
+  top: 57px;
+  left: 0px;
+}
+
+.header__items {
+  margin: 5px 0;
+}
+
+.header__socialNetwork {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.header__linkSn {
+  width: 20px;
+  height: 20px;
+}
+
+.header__twitter {
+  width: 18px;
+  height: 18px;
 }
