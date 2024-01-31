@@ -22,7 +22,7 @@ body {
 
 .header {
   position: relative;
-  margin: 10px;
+  margin: 10px 10px 0;
   display: flex;
   flex-direction: column;
 }
@@ -33,6 +33,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
   text-wrap: balance;
+  z-index: 20;
 }
 
 .header__subTitle {
@@ -48,7 +49,8 @@ body {
   background-image: url(./img/openMenu.svg);
   background-repeat: no-repeat;
   cursor: pointer;
-  /* opacity: 0; */
+  z-index: 20;
+  transition: all 0.4s;
 }
 
 .header__openMenu::after {
@@ -67,17 +69,32 @@ body {
   background-image: url(./img/closeMenu.svg);
   background-repeat: no-repeat;
   background-size: 27px;
-  left: -3px;
+  transform: translateX(-32px);
   top: 30px;
   opacity: 0;
+  transition: opacity transform 0.4s;
+}
+
+.header__closeMenu::after {
+  position: absolute;
+  content: "Menú";
+  font-size: 17px;
+  color: #000;
+  top: 2px;
+  left: 25px;
 }
 
 .header__nav {
   position: absolute;
-  background-color: #efefef;
-  padding: 10px 30px 10px 20px;
-  top: 57px;
-  left: 0px;
+  background-color: #e6e6e6;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  /* top: -154px; */
+  transform: translateY(-212px);
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.8s;
 }
 
 .header__items {
@@ -89,6 +106,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  z-index: 20;
 }
 
 .header__linkSn {
@@ -99,4 +117,24 @@ body {
 .header__twitter {
   width: 18px;
   height: 18px;
+}
+
+/* ----------- CLASES UTILIZADAS DESDE JAVASCRIPT ----------- */
+.mostrar-nav {
+  transform: translateY(7px);
+  opacity: 1;
+  transition: opacity 0.8s;
+}
+
+.mostrar-btn {
+  /* left: -3px; */
+  transform: translateX(0px);
+  top: 30px;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.ocultar-btn {
+  opacity: 0;
+  transition: opacity 0.4s;
 }
