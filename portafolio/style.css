@@ -20,6 +20,8 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+/* ----------- HEADER ----------- */
+
 .header {
   position: relative;
   margin: 10px 10px 0;
@@ -50,7 +52,7 @@ body {
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 20;
-  transition: all 0.4s;
+  /* transition: opacity 0.4s; */
 }
 
 .header__openMenu::after {
@@ -70,9 +72,10 @@ body {
   background-repeat: no-repeat;
   background-size: 27px;
   transform: translateX(-32px);
-  top: 30px;
+  top: 29px;
   opacity: 0;
   transition: opacity transform 0.4s;
+  z-index: 10;
 }
 
 .header__closeMenu::after {
@@ -80,17 +83,17 @@ body {
   content: "Menú";
   font-size: 17px;
   color: #000;
-  top: 2px;
+  top: 3px;
   left: 25px;
 }
 
 .header__nav {
   position: absolute;
-  background-color: #e6e6e6;
+  background-color: #dadada;
   width: 100%;
   padding: 10px 20px 10px 20px;
   /* top: -154px; */
-  transform: translateY(-212px);
+  transform: translateY(-258px);
   left: 0;
   z-index: 10;
   opacity: 0;
@@ -99,6 +102,16 @@ body {
 
 .header__items {
   margin: 5px 0;
+  padding: 5px 0;
+}
+
+.header__items:hover {
+  background-color: rgba(197, 194, 194, 0.5);
+}
+
+.header__links {
+  color: #000;
+  font-weight: bold;
 }
 
 .header__socialNetwork {
@@ -119,6 +132,14 @@ body {
   height: 18px;
 }
 
+/* ----------- BANNER ----------- */
+.banner__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 /* ----------- CLASES UTILIZADAS DESDE JAVASCRIPT ----------- */
 .mostrar-nav {
   transform: translateY(7px);
@@ -127,7 +148,6 @@ body {
 }
 
 .mostrar-btn {
-  /* left: -3px; */
   transform: translateX(0px);
   top: 30px;
   opacity: 1;
