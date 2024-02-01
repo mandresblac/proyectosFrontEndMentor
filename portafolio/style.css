@@ -178,7 +178,12 @@ body {
     .header__title {
       font-size: 1.7rem;
     }
-    .header__title {
+    .header__subTitle {
+      align-items: center;
+    }
+    .header__menu {
+      display: flex;
+      gap: 20px;
     }
     .header__openMenu {
       display: none;
@@ -187,11 +192,18 @@ body {
       display: none;
     }
     .header__nav {
-      transform: translateY(-11px);
+      position: static;
+      background-color: transparent;
+      transform: translateY(0);
       opacity: 1;
       width: unset;
-
-      /* position: static; */
+      padding: 0;
+    }
+    .header__items {
+      padding: 5px 10px;
+    }
+    .header__items:hover {
+      border-radius: 10px;
     }
     .banner__image {
     }
