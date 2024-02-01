@@ -146,12 +146,7 @@ body {
 }
 
 /* ----------- CLASES UTILIZADAS DESDE JAVASCRIPT ----------- */
-.mostrar-nav {
-  transform: translateY(7px);
-  opacity: 1;
-  transition: opacity 0.8s;
-}
-
+/* OJO: Las clases mostrar-btn y ocultar-btn deben ir antes de los Media queryes */
 .mostrar-btn {
   transform: translateX(0px);
   top: 30px;
@@ -170,13 +165,27 @@ body {
     font-size: 1.3rem;
   }
   .header__closeMenu {
-    transform: translateX(0px);
+    transform: translateX(-2px);
     top: 34px;
   }
   .header__closeMenu::after {
-    top: 3px;
+    top: 4px;
+    left: 27px;
   }
   .header__nav {
     transform: translateY(-264px);
   }
+
+  /* ----------- CLASES UTILIZADAS DESDE JAVASCRIPT DESDE LOS MEDYA QUERYES ----------- */
+  .mostrar-btn {
+    top: 33px;
+  }
+}
+
+/* ----------- CLASES UTILIZADAS DESDE JAVASCRIPT ----------- */
+/* OJO: La clase mostrar-nav debe ir despues de los media queryes */
+.mostrar-nav {
+  transform: translateY(7px);
+  opacity: 1;
+  transition: opacity 0.8s;
 }
