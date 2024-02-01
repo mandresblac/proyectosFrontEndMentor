@@ -52,7 +52,6 @@ body {
   background-repeat: no-repeat;
   cursor: pointer;
   z-index: 20;
-  /* transition: opacity 0.4s; */
 }
 
 .header__openMenu::after {
@@ -94,7 +93,6 @@ body {
   background-color: rgba(218, 218, 218, 0.8);
   width: 100%;
   padding: 10px 20px 10px 20px;
-  /* top: -154px; */
   transform: translateY(-261px);
   left: 0;
   z-index: 10;
@@ -159,7 +157,7 @@ body {
   transition: opacity 0.4s;
 }
 
-/* ----------- MEDIA QUERYES ----------- */
+/* ----------------- MEDIA QUERYES ----------------- */
 @media (min-width: 425px) {
   .header__title {
     font-size: 1.3rem;
@@ -174,6 +172,29 @@ body {
   }
   .header__nav {
     transform: translateY(-264px);
+  }
+
+  @media (min-width: 768px) {
+    .header__title {
+      font-size: 1.7rem;
+    }
+    .header__title {
+    }
+    .header__openMenu {
+      display: none;
+    }
+    .header__closeMenu {
+      display: none;
+    }
+    .header__nav {
+      transform: translateY(-11px);
+      opacity: 1;
+      width: unset;
+
+      /* position: static; */
+    }
+    .banner__image {
+    }
   }
 
   /* ----------- CLASES UTILIZADAS DESDE JAVASCRIPT DESDE LOS MEDYA QUERYES ----------- */
