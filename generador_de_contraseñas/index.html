@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de contraseñas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Password Generator</h1>
+
+      <div class="result-container">
+        <span class="result"></span>
+        <button class="btn-clipboard">
+          <img src="./img/clipboard.svg" alt="clipboard" />
+        </button>
+      </div>
+
+      <div class="settings">
+        <div class="setting">
+          <label for="length">Password Length</label>
+
+          <div>
+            <input
+              type="range"
+              name="range"
+              id="range"
+              min="0"
+              max="100"
+              value="50"
+              step="1"
+            />
+
+            <input type="number" name="length" id="length" min="0" max="9" />
+          </div>
+        </div>
+
+        <div class="setting">
+          <label for="uppercase">Include uppercase letters</label>
+          <input type="checkbox" name="uppercase" id="uppercase" />
+        </div>
+
+        <div class="setting">
+          <label for="lowercase">Include lowercase letters</label>
+          <input type="checkbox" name="lowercase" id="lowercase" />
+        </div>
+
+        <div class="setting">
+          <label for="numbers">Include numbers</label>
+          <input type="checkbox" name="numbers" id="numbers" />
+        </div>
+
+        <div class="setting">
+          <label for="numbers">Include symbols</label>
+          <input type="checkbox" name="symbols" id="symbols" />
+        </div>
+      </div>
+
+      <input type="submit" value="Generate Password" />
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
