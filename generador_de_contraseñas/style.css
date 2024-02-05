@@ -88,6 +88,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 18px;
+}
+
+.setting label {
+  cursor: pointer;
+}
+
+.setting label:hover {
+  color: #fff;
 }
 
 .setting-label {
@@ -102,8 +111,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: end;
-  gap: 12px;
+  gap: 16px;
 }
+
+/* Estilos específicos para input range */
 .inputs-length input[type="range"] {
   appearance: none; /* Elimina los estilos predeterminados del navegador */
   height: 7px; /* Altura del control */
@@ -129,4 +140,24 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%;
   height: 16px;
   width: 16px;
+}
+
+.inputs-length input[type="number"] {
+  outline: none;
+}
+
+.btn-generate {
+  width: 100%;
+  background-color: #5f7c92;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  color: #000;
+  border-radius: 5px;
+}
+
+.btn-generate:hover {
+  background-color: #7a97ad;
 }
