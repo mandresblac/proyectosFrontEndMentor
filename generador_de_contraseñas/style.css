@@ -118,28 +118,31 @@ body {
 .inputs-length input[type="range"] {
   appearance: none; /* Elimina los estilos predeterminados del navegador */
   height: 7px; /* Altura del control */
-  width: 100px; /* Ancho del control */
+  width: 150px; /* Ancho del control */
   background-color: #fff;
   border: 1px solid #2980b9;
   border-radius: 7px;
   outline: none;
+  direction: rtl; /* Para invertir la dirección del boton deslizante */
 }
 
-/* Estilos específicos WebKit (Chrome, Safari) para boton deslizante del input range */
+/* Estilos específicos del boton deslizante del input range para WebKit (Chrome, Safari) */
 input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   background: #86b5d9;
   border-radius: 50%;
   height: 16px;
   width: 16px;
+  direction: rtl; /* Para invertir la dirección del boton deslizante */
 }
 
-/* Estilos específicos para Firefox para boton deslizante del input range */
+/* Estilos específicos del boton deslizante del input range para Firefox */
 input[type="range"]::-moz-range-thumb {
   background: #86b5d9;
   border-radius: 50%;
   height: 16px;
   width: 16px;
+  direction: rtl; /* Para invertir la dirección del boton deslizante */
 }
 
 .inputs-length input[type="number"] {
