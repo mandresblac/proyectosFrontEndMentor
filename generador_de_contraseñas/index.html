@@ -13,22 +13,28 @@
       <div class="result-container">
         <span class="result"></span>
         <button class="btn-clipboard">
-          <img src="./img/clipboard.svg" alt="clipboard" />
+          <img
+            src="./img/clipboard.svg"
+            alt="clipboard"
+            class="img-clipboard"
+          />
         </button>
       </div>
 
       <div class="settings">
         <div class="setting">
-          <label for="length">Password Length</label>
+          <div class="setting-label">
+            <label for="length">Password Length</label>
+          </div>
 
-          <div>
+          <div class="inputs-length">
             <input
               type="range"
               name="range"
               id="range"
               min="0"
-              max="100"
-              value="50"
+              max="9"
+              value="5"
               step="1"
             />
 

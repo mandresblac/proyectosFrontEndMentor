@@ -49,7 +49,7 @@ body {
 }
 
 .result-container {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.25);
   font-size: 18px;
   letter-spacing: 1px;
   padding: 12px 10px;
@@ -63,4 +63,70 @@ body {
   max-width: calc(100% - 40px);
   overflow-y: scroll;
   height: 100%;
+}
+
+.btn-clipboard {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #5f7c92;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.img-clipboard {
+  margin: 0 auto;
+  height: 23px;
+}
+
+.setting {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.setting-label {
+  height: 46px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.inputs-length {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 12px;
+}
+.inputs-length input[type="range"] {
+  appearance: none; /* Elimina los estilos predeterminados del navegador */
+  height: 7px; /* Altura del control */
+  width: 100px; /* Ancho del control */
+  background-color: #fff;
+  border: 1px solid #2980b9;
+  border-radius: 7px;
+  outline: none;
+}
+
+/* Estilos específicos WebKit (Chrome, Safari) para boton deslizante del input range */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background: #86b5d9;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
+
+/* Estilos específicos para Firefox para boton deslizante del input range */
+input[type="range"]::-moz-range-thumb {
+  background: #86b5d9;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
 }
