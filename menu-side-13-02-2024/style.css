@@ -22,7 +22,7 @@ body{
   justify-content: start;
   font-family: "Poppins", sans-serif;
 
-  backdrop-filter: blur(10px); /* Para difuminar la imagen fondo del body */
+  backdrop-filter: blur(6px); /* Para difuminar la imagen fondo del body */
 
   background-size: cover;
   background-repeat: no-repeat;
