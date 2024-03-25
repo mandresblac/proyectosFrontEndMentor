@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu desplegable en tailwind Css</title>
+
+    <link href="./src/css/output.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-bg-proyect font-poppins">
+    <nav
+      class="bg-white w-max min-h-[400px] h-screen rounded-r-xl flex items-center"
+      data-id="menu"
+    >
+      <ul class="px-12">
+        <li class="link-parent">
+          <a href="#" class="flex gap-3 py-4">
+            <img src="./src/assets/dashboard.svg" alt="inicio" />
+            Inicio
+          </a>
+        </li>
+
+        <li class="link-parent">
+          <a href="#" class="flex gap-3 py-4" data-dropdown>
+            <img src="./src/assets/docs.svg" alt="inicio" />
+            Servicios
+            <img
+              src="./src/assets/arrow.svg"
+              alt="Arrow"
+              class="ml-auto transition-transform"
+              data-row
+            />
+          </a>
+
+          <ul class="link-child">
+            <li class="p-4 hover:bg-hover-elements">
+              <a href="#">Enlace 1</a>
+            </li>
+
+            <li class="p-4 hover:bg-hover-elements">
+              <a href="#">Enlace 2</a>
+            </li>
+
+            <li class="p-4 hover:bg-hover-elements">
+              <a href="#">Enlace 3</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="link-parent">
+          <a href="#" class="flex gap-3 py-4">
+            <img src="./src/assets/stats.svg" alt="Estadisticas" />
+            Estadisticas
+          </a>
+        </li>
+
+        <li class="link-parent">
+          <a href="#" class="flex gap-3 py-4" data-dropdown>
+            <img src="./src/assets/bell.svg" alt="Notificaciones" />
+            Notificaciones
+            <img
+              src="./src/assets/arrow.svg"
+              alt="Arrow"
+              class="ml-auto transition-transform"
+              data-row
+            />
+          </a>
+
+          <ul class="link-child">
+            <li class="p-4 hover:bg-hover-elements">
+              <a href="#">Enlace 1</a>
+            </li>
+
+            <li class="p-4 hover:bg-hover-elements">
+              <a href="#">Enlace 2</a>
+            </li>
+
+            <li class="p-4 hover:bg-hover-elements">
+              <a href="#">Enlace 3</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="link-parent">
+          <a href="#" class="flex gap-3 py-4">
+            <img src="./src/assets/message.svg" alt="Contacto" />
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="./src/js/app.js" defer></script>
+  </body>
+</html>
